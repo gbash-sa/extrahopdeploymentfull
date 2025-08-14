@@ -1,0 +1,39 @@
+# Required variables - must be provided
+vpc_id              = "vpc-1234567890abcdef0"
+extrahop_ami_id     = "ami-1234567890abcdef0"  # From AWS Marketplace
+key_pair_name       = "my-key-pair"
+
+# Environment configuration
+environment         = "lab"
+aws_region         = "us-east-1"
+
+# ExtraHop sensor configuration
+extrahop_sensor_count        = 2
+extrahop_instance_type       = "m5.xlarge"
+extrahop_storage_size        = 100
+extrahop_ppcap_storage_size  = 500
+
+# Network access
+allowed_cidr = "10.0.0.0/8"
+
+# Test instances
+create_test_instances = true
+test_instance_count   = 3
+test_instance_type    = "t3.micro"
+
+# Traffic mirroring tags
+mirror_tag_key     = "TrafficMirror"
+mirror_tag_values  = ["enabled", "true"]
+
+# ExtraHop API (placeholder - update after deployment)
+extrahop_api_endpoint = "your-company.api.extrahop.com"
+extrahop_api_id       = "your-api-id"
+extrahop_api_secret   = "your-api-secret"
+
+# Tags
+common_tags = {
+  Project     = "ExtraHop-Lab"
+  Environment = "testing"
+  Owner       = "your-team"
+  Purpose     = "traffic-mirroring"
+}
