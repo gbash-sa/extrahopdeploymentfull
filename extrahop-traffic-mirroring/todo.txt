@@ -1,0 +1,2 @@
+remove yor traces
+remove images from scripts
